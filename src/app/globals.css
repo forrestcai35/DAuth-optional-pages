@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,16 +18,115 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer components {
+  .text-header {
+    @apply font-inter font-semibold text-[24px] md:text-[40px];
+  }
+
+  .text-title {
+    @apply font-inter font-semibold text-[16px] md:text-[22px];
+  }
+
+  .text-description {
+    @apply font-inter font-medium text-[16px] md:text-[18px];
+  }
+
+  .text-menu {
+    @apply font-inter font-normal text-[13px] md:text-[16px];
+  }
+
+  .text-custom-40 {
+    @apply font-inter font-semibold text-[40px];
+  }
+
+  .text-custom-20 {
+    @apply font-inter font-medium text-[16px] md:text-[20px];
+  }
+
+  .text-custom-30 {
+    @apply font-inter font-semibold text-[20px] md:text-[30px];
+  }
+
+  .text-custom-32 {
+    @apply font-inter font-semibold text-[20px] md:text-[32px];
+  }
+
+  .text-custom-14 {
+    @apply font-inter font-normal text-[14px];
+  }
+
+  .text-custom-18 {
+    @apply font-inter font-semibold text-[18px];
+  }
+
+  .text-custom-22 {
+    @apply font-inter font-semibold md:text-[22px] text-[20px];
+  }
+
+  .text-custom-10 {
+    @apply font-inter font-medium text-[10px];
+  }
+
+  .text-custom-11 {
+    @apply font-inter font-medium text-[11px];
+  }
+
+  .text-custom-12 {
+    @apply font-inter font-normal text-[12px];
+  }
+
+  .text-header-1 {
+    @apply font-inter font-semibold text-[20px] md:text-[32px];
+  }
+
+  .text-header-2 {
+    @apply font-inter font-semibold text-[18px] md:text-[30px];
+  }
+
+  .text-header-3 {
+    @apply font-inter font-semibold text-[16px] md:text-[22px];
+  }
+
+  .text-button {
+    @apply font-inter font-semibold text-[14px] md:text-[16px];
+  }
+
+  .text-md-description {
+    @apply font-inter font-normal text-[18px];
+  }
+
+  .text-md-body {
+    @apply font-inter font-normal text-[16px];
+  }
+
+  .text-md-nav {
+    @apply font-inter font-normal text-[14px];
+  }
+
+  .text-p1 {
+    @apply font-inter font-semibold text-[13px];
+  }
+
+  .text-p2 {
+    @apply font-inter font-normal text-[13px];
+  }
+
+  .text-p3 {
+    @apply font-inter font-normal text-[11px];
+  }
+
+  .text-dropdown {
+    @apply font-inter font-normal text-[12px];
   }
 }
